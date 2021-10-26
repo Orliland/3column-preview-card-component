@@ -1,0 +1,122 @@
+:root {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  --big-shoulders-font: "Big Shoulders Display", cursive;
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0pc;
+  background-color: var(--very-light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  width: calc(100% - 50px);
+  max-width: 1000px;
+  margin: 75px auto;
+}
+
+.card {
+  width: calc(100% - 100px);
+  padding: 50px;
+}
+
+.card.orange {
+  background-color: var(--bright-orange);
+}
+
+.card.dark-cyan {
+  background-color: var(--dark-cyan);
+}
+
+.card.very-dark-cyan {
+  background-color: var(--very-dark-cyan);
+}
+
+.card:first-of-type {
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+}
+
+.card:last-of-type {
+  border-end-start-radius: 10px;
+  border-end-end-radius: 10px;
+}
+
+.card__title {
+  margin: 25px 0;
+  font-family: var(--big-shoulders-font);
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+}
+
+.card__description {
+  font-weight: 400;
+  color: var(--transparent-white);
+  line-height: 26px;
+}
+
+.card__link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 35px;
+  text-decoration: none;
+  color: var(--very-dark-cyan);
+  border: 2px solid var(--very-light-gray);
+  background-color: var(--very-light-gray);
+  border-radius: 25px;
+  text-align: center;
+}
+
+.card__link:hover {
+  color: var(--very-light-gray);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .card:first-of-type {
+    border-start-start-radius: 10px;
+    border-end-start-radius: 10px;
+    border-start-end-radius: 0;
+  }
+
+  .card:last-of-type {
+    border-end-start-radius: 0;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+  }
+
+  .card__title {
+    margin: 30px 0;
+  }
+
+  .card__link {
+    margin-top: 55px;
+  }
+}
